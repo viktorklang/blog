@@ -31,7 +31,7 @@ def recover[U >: T](pf: PartialFunction[Throwable, U])(implicit executor: Execut
     transform { _ recover pf }
 ~~~
 
-It also makes it *dead simple* to *lift* a `Future[T]` to a `Future[Try[T]`:
+It also makes it *dead simple* to *lift* a `Future[T]` to a `Future[Try[T]]`:
 
 ~~~scala
 val someFuture: Future[String] = …
