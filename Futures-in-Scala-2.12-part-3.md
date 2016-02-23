@@ -1,6 +1,7 @@
 #Futures in Scala 2.12 (part 3)
 
 This is the third of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
+For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-2.md).
 
 ##Missing canonical combinators: transform
 
@@ -46,6 +47,8 @@ Nice, right?
 1. Strictly more powerful / generic than the previous `transform`-method
 2. Straightforward to consume/transform a `Future`s `Try[_]` without having to use `onComplete` or unboxing `Future.value`
 3. For implementors of the `Future` trait, less methods to implement
+
+[Here's the RSS feed of this blog](https://github.com/viktorklang/blog/commits/master.atom) and—as I love feedback—please [share your thoughts](https://github.com/viktorklang/blog/issues/3).
 
 Stay tuned for many more updates about Futures in Scala 2.12!
 

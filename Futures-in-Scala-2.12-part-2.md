@@ -1,6 +1,7 @@
 #Futures in Scala 2.12 (part 2)
 
 This is the second of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
+For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-1.md).
 
 ##Missing canonical combinators: zipWith
 
@@ -47,6 +48,8 @@ val combinedFuture: Future[String] =
 3. Fewer allocations
 4. Fewer asynchronous steps
 5. More general than `zip`
+
+[Here's the RSS feed of this blog](https://github.com/viktorklang/blog/commits/master.atom) and—as I love feedback—please [share your thoughts](https://github.com/viktorklang/blog/issues/3).
 
 Stay tuned for many more updates about Futures in Scala 2.12!
 

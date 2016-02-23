@@ -41,6 +41,8 @@ scala> sameInstance[Int](identity, identity)
 res0: Boolean = false
 ~~~
 
+[Here's the RSS feed of this blog](https://github.com/viktorklang/blog/commits/master.atom) and—as I love feedback—please [share your thoughts](https://github.com/viktorklang/blog/issues/3).
+
 Stay tuned for many more updates about Futures in Scala 2.12!
 
 Cheers,
