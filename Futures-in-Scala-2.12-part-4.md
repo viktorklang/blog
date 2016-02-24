@@ -1,6 +1,6 @@
 #Futures in Scala 2.12 (part 4)
 
-This is the third of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
+This is the fourth of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
 For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-3.md).
 
 ##Missing canonical combinators: transformWith
