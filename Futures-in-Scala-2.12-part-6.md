@@ -1,4 +1,4 @@
-#Futures in Scala 2.12 (part 5)
+#Futures in Scala 2.12 (part 6)
 
 This is the sixth of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
 For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-5.md).
