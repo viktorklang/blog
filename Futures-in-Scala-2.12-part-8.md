@@ -19,7 +19,7 @@ Given that, we only need to have a single `var` in our `Future`-implementation, 
 
 Since `Future` can both be completed and have new callbacks added *concurrently* we need to be able to access this `var` atomically, so simply making it `@volatile` won't be enough: we need *Compare-And-Set* semantics.
 
-The first `Akka Future` which served as the main implementation inspiration for [SIP-14](), it used an inner field of type [`AtomicReference`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReference.html).
+The first `Akka Future` which served as the main implementation inspiration for [SIP-14](http://docs.scala-lang.org/sips/completed/futures-promises.html), it used an inner field of type [`AtomicReference`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReference.html).
 
 In the initial `scala.concurrent.Future` design, instead of taking the cost of having to allocate an extra object for the `AtomicReference` and take the cost for that indirection, we used what's known as an [`AtomicReferenceFieldUpdater`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReferenceFieldUpdater.html) (ARFU).
 
@@ -27,7 +27,7 @@ Now, from a Scala perspective there are 2 problems with ARFUs: 1. They require t
 
 Since performance is always important in the Standard Library, we changed to use `sun.misc.Unsafe` for the implementation of `scala.concurrent.Future` and be OK with it requiring us to have a base-class in Java with a static field to hold the memory address offset of the field.
 
-But! For 2.12.x we decided to take a «better» way, which eliminates the need for static fields and `sun.misc.Unsafe:
+But! For 2.12.x we decided to take a «better» way, which eliminates the need for static fields and `sun.misc.Unsafe`:
 
 We have now *completely replaced* the use of `sun.misc.Unsafe` for `DefaultPromise` (the internal implementation of the Scala Standard Library Promises) with *extending* [`AtomicReference`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReference.html) internally, this means that there is no need for a base-class in Java and no need for ARFUs or `sun.misc.Unsafe`.
 
