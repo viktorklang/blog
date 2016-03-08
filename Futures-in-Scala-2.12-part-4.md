@@ -46,7 +46,7 @@ And here's `recoverWith`:
 
 To comment on the blog post itself, [click here](https://github.com/viktorklang/blog/pull/4/files) or [here](https://github.com/viktorklang/blog/pull/6/files) and comment on the PR.
 
-Stay tuned for many more updates about Futures in Scala 2.12!
+[Click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-5.md) for the next part in this blog series.
 
 Cheers,
 √

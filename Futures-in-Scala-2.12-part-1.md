@@ -43,7 +43,7 @@ res0: Boolean = false
 
 [Here's the RSS feed of this blog](https://github.com/viktorklang/blog/commits/master.atom) and—as I love feedback—please [share your thoughts](https://github.com/viktorklang/blog/issues/3).
 
-Stay tuned for many more updates about Futures in Scala 2.12!
+[Click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-2.md) for the next part in this blog series.
 
 Cheers,
 √

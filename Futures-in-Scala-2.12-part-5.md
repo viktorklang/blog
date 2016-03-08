@@ -47,7 +47,7 @@ someFuture.foreach(_.launch(target))
 
 To comment on the blog post itself, [click here](https://github.com/viktorklang/blog/pull/7/files) and comment on the PR.
 
-Stay tuned for many more updates about Futures in Scala 2.12!
+[Click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-6.md) for the next part in this blog series.
 
 Cheers,
 √

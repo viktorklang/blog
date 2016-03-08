@@ -81,7 +81,7 @@ val first = Future.firstCompletedOf(someImportantFuture, someLessImportantFuture
 
 To comment on the blog post itself, [click here](https://github.com/viktorklang/blog/pull/8/files).
 
-Stay tuned for many more updates about Futures in Scala 2.12!
+[Click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-7.md) for the next part in this blog series.
 
 Cheers,
 √
