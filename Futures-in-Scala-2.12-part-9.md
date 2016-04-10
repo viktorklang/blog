@@ -38,7 +38,7 @@ def results(l: ListOfFutures)(implicit ec: ExecutionContext): FutureListOfTrys =
           // as `f` completes, use the current result `list`
           // and when `r` completes, add its result to `list`
           // and carry forward `tail` as the `remaining` for the next `acps`
-          acps(r.transform(result => Success(result :: list)), tail))
+          acps(r.transform(result => Success(result :: list)), tail)
         )
     }
   // Our initial result is `Nil`, and initially `l` is what is `remaining`
