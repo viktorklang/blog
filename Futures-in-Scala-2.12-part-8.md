@@ -42,7 +42,7 @@ We have now *completely replaced* the use of `sun.misc.Unsafe` for `DefaultPromi
 
 To comment on the blog post itself, [click here](https://github.com/viktorklang/blog/pull/11/files).
 
-Stay tuned for many more updates about Futures in Scala 2.12!
+[Click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-9.md) for the next part in this blog series.
 
 Cheers,
 √
