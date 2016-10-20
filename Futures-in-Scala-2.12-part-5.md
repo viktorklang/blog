@@ -40,7 +40,7 @@ someFuture.foreach(_.launch(target))
 
 1. Promotion of for-comprehension compatible API instead of callbacks
 2. In the end there'll be fewer methods on Future, being less confusing as to what to use and when
-3. `onComplete` then remains as a performance-optimization of (`transform`)[https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-3.md], not having to create `Future`s to return.
+3. `onComplete` then remains as a performance-optimization of [`transform`](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-3.md), not having to create `Future`s to return.
 
 
 [Here's the RSS feed of this blog](https://github.com/viktorklang/blog/commits/master.atom) and—as I love feedback—please [share your thoughts](https://github.com/viktorklang/blog/issues/3).
