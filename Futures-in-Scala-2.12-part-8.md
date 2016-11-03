@@ -13,7 +13,7 @@ A `Future` can be seen as a tri-state<sup>[1](#tristate)</sup> state machine wit
 
 In order to have an «asynchronous Future» it is vital to be able to register logic to be executed once the `Future` becomes Completed.
 
-This means that we can encode the state `1` as a «sequence of callbacks & their `ExeutionContext`», state `2` as a `scala.util.Success`, and state `3` as a `scala.util.Failure`.
+This means that we can encode the state `1` as a «sequence of callbacks & their `ExecutionContext`», state `2` as a `scala.util.Success`, and state `3` as a `scala.util.Failure`.
 
 Given that, we only need to have a single `var` in our `Future`-implementation, which will either be a `Seq`, a `Success` or a `Failure`.
 
