@@ -1,14 +1,14 @@
-#Futures in Scala 2.12 (part 9)
+# Futures in Scala 2.12 (part 9)
 
 This is the ninth, and last, of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
 For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-8.md).
 
-##WARNING: ADVANCED TOPICS AHEAD
+## WARNING: ADVANCED TOPICS AHEAD
 
 
-##Feature: Improved Promise Linking (I promise!)
+## Feature: Improved Promise Linking (I promise!)
 
-###ACPS (no, not an abbreviation of ALLCAPS)
+### ACPS (no, not an abbreviation of ALLCAPS)
 A really useful technique when working with `Future` is what I call `Async Continuation Passing Style` (ACPS), which was introduced to me by Marius Eriksen ([@marius](https://twitter.com/marius)) years ago, and while we're on the topic—Marius is awesome.
 
 My *casual* definition of `ACPS` is the use of Future.flatMap/recoverWith to «Divide and Conquer»™ problems into what looks like ordinary recursive invocations. For Scala 2.12 and onwards, we also have [`transformWith`](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-4.md).
@@ -69,7 +69,7 @@ res1: FutureListOfTrys = Future(Success(List(Success(5), Failure(java.lang.Excep
 *Hopefully* I have been able to illustrate how one can use ACPS to decompose problems recursively, without building up a callstack, and being more in line with [trampolining](https://en.wikipedia.org/wiki/Trampoline_(computing)).
 
 
-###Promise Linking 
+### Promise Linking 
 
 Now, if an implementation of `Future` is not careful, it is easy to create a space-leak with ACPS code.
 
@@ -121,7 +121,7 @@ Outcome:
   
 The reason for failing on 2.10.6 and 2.11.8 is that `Promise Linking` is for those versions only supported for `flatMap`, not `recoverWith`. And `transformWith` does not exist in those versions. In 2.12.x Promise Linking is implemented for `transformWith` which both `flatMap` and `recoverWith` uses, so they get the feature for free.
 
-###Benefits
+### Benefits
 
 1. ACPS is a very useful way of encoding solutions
 2. Promise Linking addresses a certain class of space leaks introduced by ACPS
