@@ -1,9 +1,9 @@
-#Futures in Scala 2.12 (part 3)
+# Futures in Scala 2.12 (part 3)
 
 This is the third of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
 For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-2.md).
 
-##Missing canonical combinators: transform
+## Missing canonical combinators: transform
 
 Now, if you're thinking "Hey Viktor, there's already a `transform`-method on `Future`!" then you're most definitely right. And I'll explain myself.
 
@@ -42,7 +42,7 @@ val lifted/*: Future[Try[String]]*/ = someFuture.transform(Try(_))
 Nice, right?
 
 
-###Benefits:
+### Benefits:
 
 1. Strictly more powerful / generic than the previous `transform`-method
 2. Straightforward to consume/transform a `Future`s `Try[_]` without having to use `onComplete` or unboxing `Future.value`
