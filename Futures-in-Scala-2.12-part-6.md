@@ -1,9 +1,9 @@
-#Futures in Scala 2.12 (part 6)
+# Futures in Scala 2.12 (part 6)
 
 This is the sixth of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
 For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-5.md).
 
-##Missing utilities: unit & never
+## Missing utilities: unit & never
 
 Something I've always felt was missing is having a «zero» for `Future`—or more frequently called a «default instance» of a `Future`.
 
@@ -72,7 +72,7 @@ val someLessImportantFuture: Future[String] = if (someCondition) Future.never el
 val first = Future.firstCompletedOf(someImportantFuture, someLessImportantFuture) // Will always pick someImportantFuture if someCondition is true
 ~~~
 
-###Benefits:
+### Benefits:
 
 1. Future.unit is a «zero» instance which is cached
 2. Future.never removes the risk of memory leaks when used as a `Future` instance which never completes
