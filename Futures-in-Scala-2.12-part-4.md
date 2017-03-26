@@ -1,9 +1,9 @@
-#Futures in Scala 2.12 (part 4)
+# Futures in Scala 2.12 (part 4)
 
 This is the fourth of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
 For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-3.md).
 
-##Missing canonical combinators: transformWith
+## Missing canonical combinators: transformWith
 
 As we saw in the previous post, `transform` provides a nice unification of both `map` and `recover` on `Future`, and I know what you're thinking now: "What about `flatMap` and `recoverWith`?"
 
@@ -38,7 +38,7 @@ And here's `recoverWith`:
     }
 ~~~
 
-###Benefits:
+### Benefits:
 
 1. Ultimate power, for when you require it
 
