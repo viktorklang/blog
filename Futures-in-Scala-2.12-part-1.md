@@ -1,8 +1,8 @@
-#Futures in Scala 2.12 (part 1)
+# Futures in Scala 2.12 (part 1)
 
 This is the first of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
 
-##Missing canonical combinators: flatten
+## Missing canonical combinators: flatten
 
 Are you one of us Future-users who have grown tired of the old `flatMap(identity)` boilerplate for un-nesting `Future`s as in:
 
@@ -25,7 +25,7 @@ val future: Future[Future[X]] = ???
 val flattenedFuture /*: Future[X] */ = future.flatten
 ~~~
 
-###Benefits:
+### Benefits:
 
 1. Less to type
 2. Less to read
