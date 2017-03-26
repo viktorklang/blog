@@ -1,9 +1,9 @@
-#Futures in Scala 2.12 (part 2)
+# Futures in Scala 2.12 (part 2)
 
 This is the second of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
 For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-1.md).
 
-##Missing canonical combinators: zipWith
+## Missing canonical combinators: zipWith
 
 Being able to *join* two `Future`s together to produce a new `Future`
 which contains a `Tuple` of the results of both has been available for a while with the `zip` operation, and this looks something like this:
@@ -41,7 +41,7 @@ val combinedFuture: Future[String] =
     future1.zipWith(future2)((string, int) => s"$string & $int")
 ~~~
 
-###Benefits:
+### Benefits:
 
 1. Less to type
 2. Less to read
