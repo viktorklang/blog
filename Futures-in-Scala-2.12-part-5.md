@@ -1,9 +1,9 @@
-#Futures in Scala 2.12 (part 5)
+# Futures in Scala 2.12 (part 5)
 
 This is the fifth of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
 For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-4.md).
 
-##Deprecations: onSuccess and onFailure
+## Deprecations: onSuccess and onFailure
 
 Since its inception and subsequent inclusion in the Scala Standard Library, `Future` has had 3 distinctly identifiable callback methods. `onComplete`, `onSuccess`, and `onFailure`.
 
@@ -36,7 +36,7 @@ someFuture.foreach(_.launch(target))
 //Could be executed in any order and not unlikely in parallel
 ~~~
 
-###Benefits:
+### Benefits:
 
 1. Promotion of for-comprehension compatible API instead of callbacks
 2. In the end there'll be fewer methods on Future, being less confusing as to what to use and when
