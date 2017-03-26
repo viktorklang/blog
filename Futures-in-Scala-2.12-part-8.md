@@ -1,9 +1,9 @@
-#Futures in Scala 2.12 (part 8)
+# Futures in Scala 2.12 (part 8)
 
 This is the eighth of several posts describing the evolution of `scala.concurrent.Future` in Scala `2.12.x`.
 For the previous post, [click here](https://github.com/viktorklang/blog/blob/master/Futures-in-Scala-2.12-part-7.md).
 
-##Goodbye, sun.misc.Unsafe
+## Goodbye, sun.misc.Unsafe
 
 A `Future` can be seen as a tri-state<sup>[1](#tristate)</sup> state machine with the following distinct states:
 
@@ -31,7 +31,7 @@ But! For 2.12.x we decided to take a «better» way, which eliminates the need f
 
 We have now *completely replaced* the use of `sun.misc.Unsafe` for `DefaultPromise` (the internal implementation of the Scala Standard Library Promises) with *extending* [`AtomicReference`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReference.html) internally, this means that there is no need for a base-class in Java and no need for ARFUs or `sun.misc.Unsafe`.
 
-###Benefits
+### Benefits
 
 1. The same, excellent, performance as previously
 2. With much better platform compatibility and security
